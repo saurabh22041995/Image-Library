@@ -48,7 +48,7 @@ function template() {
                     >
                       Image {index+1}
                     </span>
-                    <button className="download">Download</button>
+                    {/* <button className="download">Download</button> */}
                   </div>
                 </div>
               );
