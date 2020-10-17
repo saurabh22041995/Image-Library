@@ -18,7 +18,6 @@ class upload extends React.Component {
       }
     })
     .then(res=>{
-      console.log(res);
       let imageUrls = []
       for(let image = 0; image<res.data.length; image++){
         var arrayBufferView = new Uint8Array( res.data[image].img.data.data );
@@ -27,7 +26,6 @@ class upload extends React.Component {
         var imageUrl = urlCreator.createObjectURL( blob );
         imageUrls.push(imageUrl)
         this.setState({imageUrls})
-        console.log(this.state.imageUrls);
       }
       
     })
@@ -58,7 +56,6 @@ class upload extends React.Component {
         }).catch((error) => {
           console.log("=========",error);
     });
-    
 }
 
   fileSelectedHandler = async (e) => {
